@@ -1,0 +1,1 @@
+document.write('我在js黨裡面');
