@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <select class="class_month" name="month">
+        <!-- <option value="1">1 m</option>
+        <option value="2">2 m</option>
+        <option value="3">3 m</option>
+        <option value="4">4 m</option>
+        <option value="5">5 m</option>
+        <option value="6">6 m</option>
+        <option value="7">7 m</option>
+        <option value="8">8 m</option>
+        <option value="9">9 m</option>
+        <option value="10">10 m</option>
+        <option value="11">11 m</option>
+        <option value="12">12 m</option> -->
+    </select>
+    </form>
+    <br>
+
+    <h2 class="show">1 m</h2>
+<script>
+    function show_month(){
+        let val = document.querySelector(".class_month").value;
+        // console.log(val);
+        document.querySelector(".show").innerText = val + "月";
+    }
+    function init(){
+        let month = "";
+        for(var i=1 ; i<13 ; i++){
+            month+=`<option value="${i}">${i}月</option>`
+        }
+        
+        document.querySelector(".class_month").innerHTML=month;
+        document.querySelector('.class_month').addEventListener('change',show_month);
+    }
+
+    window.addEventListener('load',init);
+</script>
+</body>
+</html>

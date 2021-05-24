@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box_color_c {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+}
+    </style>
 </head>
 <body>
-    <script>
-        var time = 8000;
-        var second=Math.floor(8000%60);
-        var min=Math.floor(8000/60%60);
-        var hour=Math.floor(8000/60/60%24);
-document.write(time + "秒="+ hour + "小時" + min + "分" + second + "秒");
-    </script>
+    <div class="box_color_c"></div>
+<button id="btn">click</button>
 </body>
+<script>
+    function test(){
+        console.log('aaaa')
+    }
+    document.querySelector('#btn').onclick=test;
+</script>
 </html>
