@@ -47,5 +47,22 @@
             <a href="#facebook"><img src="img\facebook.png" alt="facebook"></a>
         </div>
     </div>
+
+    <script>
+
+        function change_botton(e){
+            let val = e.target.src;
+            document.querySelector('.bigcup').setAttribute('src',val);
+        }
+
+        function init(){
+            document.querySelectorAll('.bottomimg > img').
+            forEach(function(element){
+                element.addEventListener('click',change_botton);
+            });
+        }
+
+        window.addEventListener('load',init);
+    </script>
 </body>
 </html>
